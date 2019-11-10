@@ -10,19 +10,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'resume-project';
 
-  HighSchool = {
-        name: 'Nobel Academy',
-        degree: 'High School',
-        date: '2009 - 2011',
-        address: 'Kathmandu, Nepal'
-      }
+  myName = {
+    first: 'Rojesh',
+    last: 'Dangol'
+  }
+  
+  skills = ['C++', 'HTML/JavaScript/CSS, Python',
+   'Arduino', 'Shell Scripting', 
+   'Adobe Photoshop / Illustrator / InDesign', '3D Modelling', 'Angular'
+  ];
 
-  University = {
-        college: 'Slippery Rock University',
-        degree: 'Undergraduate',
-        date: '2015 - May 2020 (Expected)',
-        address: 'Slippery Rock, PA' 
-      }
+  
+      
     
 
   };

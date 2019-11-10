@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { JobsComponent } from './body/jobs/jobs.component';
 import { EducationComponent } from './body/education/education.component';
 import { IntroComponent } from './body/intro/intro.component';
+import { SkillComponent } from './body/skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IntroComponent } from './body/intro/intro.component';
     FooterComponent,
     JobsComponent,
     EducationComponent,
-    IntroComponent
+    IntroComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,
