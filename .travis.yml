@@ -1,19 +1,21 @@
 language: node_js
 
 install: skip
-script: skip
 
 addons:
   apt:
     packages:
       - sshpass
+      
+script:
+- npm run build
 
 deploy:
   - provider: azure_web_apps
     verbose: true
-    username: resume-rojesh\$resume-rojesh
-    password: h5RflwlHADbiQlnlu10bGoQ64TND0enzjCAJkefpjmipfs7LzKP1Wpq1YFPT
+    username: rojesh-resume\$rojesh-resume
+    password: eeh9kc28ZeKnSGDnnBtvmE4CY5kP4hqsica1iSRYokeljCcGYN5hTlkbbjPB
     slot: resume-rojesh
-    site: https://resume-rojesh.azurewebsites.net
+    site: https://rojesh-resume.azurewebsites.net
 
     skip_cleanup: true
