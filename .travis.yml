@@ -1,14 +1,12 @@
 language: node_js
 
 install: skip
-
+script: skip
 addons:
   apt:
     packages:
       - sshpass
       
-script:
-- npm run build
 
 deploy:
   - provider: azure_web_apps
