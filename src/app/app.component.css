@@ -1,0 +1,12 @@
+:host {
+    display: block;
+    border: 2px solid black;
+    background-color: lightgray;
+  }
+
+  p {
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center;
+    line-height: .2cm;
+};
