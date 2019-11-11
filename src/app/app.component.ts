@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'resume-project';
 
-  myName = {
+  Name = {
     first: 'Rojesh',
     last: 'Dangol'
   }

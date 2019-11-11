@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/83a124a2-6e79-43bf-8a4f-e8e17d54ede5/resourceGroups/resume/providers/Microsoft.Web/sites/resume-rojesh",
+    "appService.deploySubpath": ""
+}
