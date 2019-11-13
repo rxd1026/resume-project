@@ -14,11 +14,10 @@ export class AppComponent {
     first: 'Rojesh',
     last: 'Dangol'
   }
+
+  Rmessage="Root message"
   
-  skills = ['C++', 'HTML/JavaScript/CSS, Python',
-   'Arduino', 'Shell Scripting', 
-   'Adobe Photoshop / Illustrator / InDesign', '3D Modelling', 'Angular'
-  ];
+ 
 
   
       
