@@ -9,14 +9,10 @@ import { AppComponent } from '../app.component';
   providers: [AppComponent]
 })
 export class BodyComponent implements OnInit {
-
-  Pmessage= "Skills"
-
-
-  Pskill= [ 'C++', 'HTML/JavaScript/CSS, Python',
-  'Arduino', 'Shell Scripting', 
-  'Adobe Photoshop / Illustrator / InDesign', '3D Modelling', 'Angular'
- ]
+  @Input() myIntro: string;
+  @Input() myJobsInBody: any;
+  @Input() myEducationInBody: any;
+  @Input() mySkillsInBody: any;
 
 
   constructor() { }

@@ -1,14 +1,10 @@
 
-<app-intro class="par"></app-intro>
-<app-skill [Cmessage]="Pmessage"></app-skill>
+<app-intro class="par" [myIntroduction]= "myIntro"></app-intro>
 
-
-<app-skill [CSkill]="PSkill"></app-skill>
-
-
+<app-skill [mySkills]="mySkillsInBody"></app-skill>
 
 <h1>Experience</h1>
-<app-jobs></app-jobs>
+<app-jobs [myJobs] = "myJobsInBody"></app-jobs>
 
 <h1>EDUCATION</h1>
-<app-education></app-education>
+<app-education [myEducation]="myEducationInBody"></app-education>
