@@ -28,7 +28,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\r\n<app-header></app-header>\r\n<app-body></app-body>\r\n<app-footer></app-footer>\r\n\r\n<ul>\t\r\n    <li *ngFor=\"let skill of skills\">{{skill}}</li>\t\r\n</ul>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<app-header [myInfo] = \"Info\"></app-header>\r\n<app-body [myIntro]= \"Intro\" [myJobsInBody]=\"Jobs\" [myEducationInBody]=\"Education\" [mySkillsInBody]=\"Skills\"></app-body>\r\n<app-footer></app-footer>\r\n\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/body.component.html": 
@@ -39,7 +39,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\r\n<app-intro></app-intro>\r\n<app-skill></app-skill>\r\n\r\n<h1>Experience</h1>\r\n<app-jobs></app-jobs>\r\n\r\n<h1>EDUCATION</h1>\r\n<app-education></app-education>\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("\r\n<app-intro class=\"par\" [myIntroduction]= \"myIntro\"></app-intro>\r\n\r\n<app-skill [mySkills]=\"mySkillsInBody\"></app-skill>\r\n\r\n\r\n<app-jobs  [myJobs] = \"myJobsInBody\"></app-jobs>\r\n\r\n\r\n<app-education [myEducation]=\"myEducationInBody\"></app-education>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/education/education.component.html": 
@@ -50,7 +50,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>2015 - May 2020 (Expected)</p>\r\n<h2>COMPUTER SCIENCE INFORMATION TECHNOLOGY</h2>\r\n<h3>SLIPPERY ROCK UNIVERSITY</h3>\r\n<h4>SLIPPERY ROCK, PA</h4>\r\n\r\n<p>2009 - 2011</p>\r\n<h2>HIGH SCHOOL</h2>\r\n<h3>NOBEL ACADEMY</h3>\r\n<h4>KATHMANDU, NEPAL</h4>\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<h2>Education</h2>\r\n\r\n<h3>{{myEducation.college.degree}}</h3>\r\n<p>{{myEducation.college.date.start}}-{{myEducation.high.date.end}}</p>\r\n<h4>{{myEducation.college.name}}</h4>\r\n<h5>{{myEducation.college.location}}</h5>\r\n\r\n<h3>{{myEducation.high.degree}}</h3>\r\n<p>{{myEducation.high.date.start}}-{{myEducation.high.date.end}}</p>\r\n<h4>{{myEducation.high.name}}</h4>\r\n<h5>{{myEducation.high.location}}</h5>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/intro/intro.component.html": 
@@ -61,7 +61,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>An undergraduate student seeking an internship position to\r\n        explore career options in the IT sector. I am hard-working and\r\n        self-motivated student, always looking to improve my skills and\r\n        learn more. I am committed to developing my career path as an\r\n        IT professional and to expand on the work experience.</p>\r\n\r\n        \r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("   <p>{{myIntroduction.desc}}</p>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/jobs/jobs.component.html": 
@@ -72,7 +72,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\r\n    <h2>ASSISTANT MANAGER</h2>\r\n    HELP ME DOT COM, KATHMANDU, NEPAL / 2011 – 2015\r\n    <ul>\r\n    <li> Small scale online shopping and I was responsible to keep\r\n    track of items in the store.</li>\r\n    <li> Responsible of purchasing and updating new items for the\r\n    website.</li>\r\n    <li> Manage the orders, decide how and when the delivery was\r\n    to be made as the company had limited employees.</li>\r\n    <li> Deal with other partner companies and get the best deal\r\n    possible.</li>\r\n    </ul>\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("    <h2>Experience</h2>\r\n\r\n    <h4>{{myJobs.jobA.company}}, {{myJobs.jobA.location}} / {{myJobs.jobA.date}}</h4> \r\n    \r\n    <ul>\r\n    <li *ngFor=\"let i of myJobs.jobA.desc\">{{i}}</li>\r\n    </ul>\r\n    \r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/skill/skill.component.html": 
@@ -83,7 +83,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("");
+            /* harmony default export */ __webpack_exports__["default"] = ("<h2>Skills</h2>\r\n\r\n<ul>\t\r\n    <li *ngFor=\"let i of mySkills.skill\">{{i}}</li>\t\r\n</ul>\r\n\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/footer/footer.component.html": 
@@ -94,7 +94,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>footer works!</p>\r\n\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/header/header.component.html": 
@@ -105,7 +105,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<h1>Rojesh Dangol</h1>\r\n<p>Address: 816 Perry HWY, Apt24</p>\r\n<p>Pittsburgh, PA</p>\r\n<p>Email: rozsx1@gmail.com</p>\r\n<p>Phone no.: 412-689-3520</p>\r\n<p>LinkedIn: www.linkedin.com/in/rojesh-dangol</p>\r\n\r\n{{myName | json}}\r\n\r\n<p>{{myName.first}}</p>\r\n<p>{{title}}</p>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <h1>{{myInfo.first}} {{myInfo.last}}</h1>\r\n    <p>{{myInfo.address.street}}, Apt: {{myInfo.address.apt}}</p>\r\n    <p>{{myInfo.address.city}}, {{myInfo.address.state}}</p>\r\n<p>Email: {{myInfo.email}}</p>\r\n<p>Phone no.: {{myInfo.phone}}</p>\r\n<p>LinkedIn: {{myInfo.link}}</p>\r\n</div>\r\n\r\n");
             /***/ 
         }),
         /***/ "./node_modules/tslib/tslib.es6.js": 
@@ -442,7 +442,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */");
+            /* harmony default export */ __webpack_exports__["default"] = (":host {\r\n    display: block;\r\n    width: 50%;\r\n    border: 2px solid black;\r\n    background-color: lightgray;\r\n    padding: 25px;\r\n    \r\n  }\r\n\r\n\r\n\r\n  :host ::ng-deep app-intro.par {\r\n    font-family: verdana;\r\n    font-size: 20px;\r\n    text-align: center;\r\n   \r\n}\r\n\r\n\r\n\r\n  :host ::ng-deep app-body {\r\n  padding: 50px;\r\n  font-family: verdana;\r\n  font-size: 20px;\r\n  text-align: left;\r\n \r\n}\r\n\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxjQUFjO0lBQ2QsVUFBVTtJQUNWLHVCQUF1QjtJQUN2QiwyQkFBMkI7SUFDM0IsYUFBYTs7RUFFZjs7OztFQUlBO0lBQ0Usb0JBQW9CO0lBQ3BCLGVBQWU7SUFDZixrQkFBa0I7O0FBRXRCOzs7O0VBR0E7RUFDRSxhQUFhO0VBQ2Isb0JBQW9CO0VBQ3BCLGVBQWU7RUFDZixnQkFBZ0I7O0FBRWxCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHdpZHRoOiA1MCU7XHJcbiAgICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcclxuICAgIHBhZGRpbmc6IDI1cHg7XHJcbiAgICBcclxuICB9XHJcblxyXG5cclxuXHJcbiAgOmhvc3QgOjpuZy1kZWVwIGFwcC1pbnRyby5wYXIge1xyXG4gICAgZm9udC1mYW1pbHk6IHZlcmRhbmE7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgIFxyXG59XHJcblxyXG5cclxuOmhvc3QgOjpuZy1kZWVwIGFwcC1ib2R5IHtcclxuICBwYWRkaW5nOiA1MHB4O1xyXG4gIGZvbnQtZmFtaWx5OiB2ZXJkYW5hO1xyXG4gIGZvbnQtc2l6ZTogMjBweDtcclxuICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gXHJcbn1cclxuXHJcblxyXG4iXX0= */");
             /***/ 
         }),
         /***/ "./src/app/app.component.ts": 
@@ -459,14 +459,46 @@
             var AppComponent = /** @class */ (function () {
                 function AppComponent() {
                     this.title = 'resume-project';
-                    this.Name = {
+                    this.Info = {
                         first: 'Rojesh',
-                        last: 'Dangol'
+                        last: 'Dangol',
+                        address: { street: '816 Perry HWY', city: 'Pittsburgh', state: 'PA', zip: '15229', apt: '24' },
+                        email: 'rozsx1@gmail.com',
+                        phone: '412-689-3520',
+                        link: 'www.linkedin.com/in/rojesh-dangol'
                     };
-                    this.skills = ['C++', 'HTML/JavaScript/CSS, Python',
-                        'Arduino', 'Shell Scripting',
-                        'Adobe Photoshop / Illustrator / InDesign', '3D Modelling', 'Angular'
-                    ];
+                    this.Intro = {
+                        desc: 'An undergraduate student seeking an internship position to explore career options in the IT sector. I am hard-working and self-motivated student, always looking to improve my skills and learn more. I am committed to developing my career path as an IT professional and to expand on the work experience.'
+                    };
+                    this.Skills = { skill: ['C++', 'HTML/JavaScript/CSS, Python',
+                            'Arduino', 'Shell Scripting',
+                            'Adobe Photoshop / Illustrator / InDesign', '3D Modelling', 'Angular'
+                        ] };
+                    this.Jobs = {
+                        jobA: {
+                            date: '2011-2015',
+                            company: 'Help Me Dot Com. Pvt. Ltd',
+                            position: 'Assistant Manager',
+                            location: 'Kathmandu, Nepal',
+                            desc: ['Small scale online shopping and I was responsible to keep track of items in the store.', 'Responsible of purchasing and updating new items for the website.', 'Manage the orders, decide how and when the delivery was to be made as the company had limited employees.', 'Deal with other partner companies and get the best deal possible.']
+                        }
+                    };
+                    this.Education = {
+                        high: {
+                            name: 'Nobel Academy',
+                            date: { start: '2009',
+                                end: '2011' },
+                            degree: 'High School',
+                            location: 'Kathmandu, Nepal'
+                        },
+                        college: {
+                            name: 'Slippery Rock University',
+                            date: { start: '2015',
+                                end: '2020' },
+                            degree: 'Computer Science Information Technology',
+                            location: 'Slippery Rock, PA'
+                        }
+                    };
                 }
                 return AppComponent;
             }());
@@ -550,6 +582,7 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BodyComponent", function () { return BodyComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
             var BodyComponent = /** @class */ (function () {
                 function BodyComponent() {
                 }
@@ -557,10 +590,23 @@
                 };
                 return BodyComponent;
             }());
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], BodyComponent.prototype, "myIntro", void 0);
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], BodyComponent.prototype, "myJobsInBody", void 0);
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], BodyComponent.prototype, "myEducationInBody", void 0);
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], BodyComponent.prototype, "mySkillsInBody", void 0);
             BodyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-body',
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./body.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/body.component.html")).default,
+                    providers: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]],
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./body.component.css */ "./src/app/body/body.component.css")).default]
                 })
             ], BodyComponent);
@@ -574,7 +620,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2JvZHkvZWR1Y2F0aW9uL2VkdWNhdGlvbi5jb21wb25lbnQuY3NzIn0= */");
+            /* harmony default export */ __webpack_exports__["default"] = ("\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2JvZHkvZWR1Y2F0aW9uL2VkdWNhdGlvbi5jb21wb25lbnQuY3NzIn0= */");
             /***/ 
         }),
         /***/ "./src/app/body/education/education.component.ts": 
@@ -588,6 +634,8 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EducationComponent", function () { return EducationComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+            /* harmony import */ var _body_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../body.component */ "./src/app/body/body.component.ts");
             var EducationComponent = /** @class */ (function () {
                 function EducationComponent() {
                 }
@@ -595,10 +643,14 @@
                 };
                 return EducationComponent;
             }());
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], EducationComponent.prototype, "myEducation", void 0);
             EducationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-education',
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./education.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/education/education.component.html")).default,
+                    providers: [src_app_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _body_component__WEBPACK_IMPORTED_MODULE_3__["BodyComponent"]],
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./education.component.css */ "./src/app/body/education/education.component.css")).default]
                 })
             ], EducationComponent);
@@ -626,6 +678,8 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntroComponent", function () { return IntroComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _body_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../body.component */ "./src/app/body/body.component.ts");
+            /* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
             var IntroComponent = /** @class */ (function () {
                 function IntroComponent() {
                 }
@@ -633,10 +687,14 @@
                 };
                 return IntroComponent;
             }());
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], IntroComponent.prototype, "myIntroduction", void 0);
             IntroComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-intro',
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./intro.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/intro/intro.component.html")).default,
+                    providers: [_body_component__WEBPACK_IMPORTED_MODULE_2__["BodyComponent"], src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./intro.component.css */ "./src/app/body/intro/intro.component.css")).default]
                 })
             ], IntroComponent);
@@ -664,6 +722,8 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobsComponent", function () { return JobsComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+            /* harmony import */ var _body_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../body.component */ "./src/app/body/body.component.ts");
             var JobsComponent = /** @class */ (function () {
                 function JobsComponent() {
                 }
@@ -671,10 +731,14 @@
                 };
                 return JobsComponent;
             }());
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], JobsComponent.prototype, "myJobs", void 0);
             JobsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-jobs',
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./jobs.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/jobs/jobs.component.html")).default,
+                    providers: [src_app_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _body_component__WEBPACK_IMPORTED_MODULE_3__["BodyComponent"]],
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./jobs.component.css */ "./src/app/body/jobs/jobs.component.css")).default]
                 })
             ], JobsComponent);
@@ -702,6 +766,8 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillComponent", function () { return SkillComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _body_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../body.component */ "./src/app/body/body.component.ts");
+            /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../app.component */ "./src/app/app.component.ts");
             var SkillComponent = /** @class */ (function () {
                 function SkillComponent() {
                 }
@@ -709,10 +775,14 @@
                 };
                 return SkillComponent;
             }());
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], SkillComponent.prototype, "mySkills", void 0);
             SkillComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-skill',
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./skill.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/body/skill/skill.component.html")).default,
+                    providers: [_body_component__WEBPACK_IMPORTED_MODULE_2__["BodyComponent"], _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./skill.component.css */ "./src/app/body/skill/skill.component.css")).default]
                 })
             ], SkillComponent);
@@ -770,7 +840,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJ9 */");
+            /* harmony default export */ __webpack_exports__["default"] = ("h1 {\r\n    font-family: Georgia, 'Times New Roman', Times, serif;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    line-height: .2cm;\r\n}\r\n\r\np {\r\n    font-family: verdana;\r\n    font-size: 15px;\r\n    text-align: center;\r\n    line-height: .2cm;\r\n}\r\n\r\ndiv {\r\n    border-bottom: 1px solid black; \r\n};\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kscURBQXFEO0lBQ3JELGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksb0JBQW9CO0lBQ3BCLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksOEJBQThCO0FBQ2xDLENBQUEiLCJmaWxlIjoic3JjL2FwcC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoMSB7XHJcbiAgICBmb250LWZhbWlseTogR2VvcmdpYSwgJ1RpbWVzIE5ldyBSb21hbicsIFRpbWVzLCBzZXJpZjtcclxuICAgIGZvbnQtc2l6ZTogNTBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGxpbmUtaGVpZ2h0OiAuMmNtO1xyXG59XHJcblxyXG5wIHtcclxuICAgIGZvbnQtZmFtaWx5OiB2ZXJkYW5hO1xyXG4gICAgZm9udC1zaXplOiAxNXB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgbGluZS1oZWlnaHQ6IC4yY207XHJcbn1cclxuXHJcbmRpdiB7XHJcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgYmxhY2s7IFxyXG59OyJdfQ== */");
             /***/ 
         }),
         /***/ "./src/app/header/header.component.ts": 
@@ -784,6 +854,7 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function () { return HeaderComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
             var HeaderComponent = /** @class */ (function () {
                 function HeaderComponent() {
                 }
@@ -793,11 +864,12 @@
             }());
             tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-            ], HeaderComponent.prototype, "myName", void 0);
+            ], HeaderComponent.prototype, "myInfo", void 0);
             HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-header',
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./header.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/header/header.component.html")).default,
+                    providers: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]],
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./header.component.css */ "./src/app/header/header.component.css")).default]
                 })
             ], HeaderComponent);
@@ -855,7 +927,7 @@
           \***************************/
         /*! no static exports found */
         /***/ (function (module, exports, __webpack_require__) {
-            module.exports = __webpack_require__(/*! C:\Users\rxd1026\Downloads\cmder\resume-project\src\main.ts */ "./src/main.ts");
+            module.exports = __webpack_require__(/*! D:\Rojesh\SRU Fall 2019\Scripting\cmder\resume-project\src\main.ts */ "./src/main.ts");
             /***/ 
         })
     }, [[0, "runtime", "vendor"]]]);
