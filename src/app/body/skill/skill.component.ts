@@ -9,10 +9,8 @@ import { AppComponent } from '../../app.component';
   providers: [BodyComponent, AppComponent]
 })
 export class SkillComponent implements OnInit {
-  @Input() Cmessage: string;
-  @Input() CRmessage: string;
-  @Input() CSkill: string[];
-  @Input() EachSkill: string;
+  @Input() mySkills: any;
+  
 
   constructor() { }
 
