@@ -12,8 +12,8 @@ deploy:
   - provider: azure_web_apps
     verbose: true
     username: rojesh-resume\$rojesh-resume
-    password: eeh9kc28ZeKnSGDnnBtvmE4CY5kP4hqsica1iSRYokeljCcGYN5hTlkbbjPB
-    slot: resume-rojesh
+    password: 3Sv00DZZTaX0RHdun0Mj1gmGhJk4tT5kbgXwY82pXqSq7hykCySmpbijeDJ2
+    slot: 
     site: https://rojesh-resume.azurewebsites.net
 
     skip_cleanup: true
