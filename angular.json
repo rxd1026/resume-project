@@ -60,6 +60,11 @@
             }
           }
         },
+		"assets": [
+        "assets",
+        "favicon.ico",
+        "web.config"
+      ],
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
