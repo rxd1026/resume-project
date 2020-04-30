@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.11",
     "bootstrap": "^3.4.1",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "kuduscript": "^1.0.17",
     "path": "^0.12.7",
     "rxjs": "~6.4.0",
